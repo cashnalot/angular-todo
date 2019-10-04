@@ -6,12 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'todo-list';
 
-  model = {
-    left: true,
-    middle: false,
-    right: false
-  };
+
 
 }
