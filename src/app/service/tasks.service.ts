@@ -15,12 +15,12 @@ export class TasksService {
   }
 
   add(task: string) {
-    this.tasksDone.push(task);
+    this.tasksList.push(task);
     this.tasksListObs.next(this.tasksList);
   }
 
   remove(task: string) {
-    this.tasksList = this.tasksDone.filter(e => e !== task);
+    this.tasksList = this.tasksList.filter(e => e !== task);
     this.tasksListObs.next(this.tasksList);
   }
 
