@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { TasksService } from '../service/tasks.service';
 
 @Component({

@@ -1,5 +1,5 @@
 import { TasksService } from './../service/tasks.service';
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-add-task',
@@ -20,7 +20,6 @@ newTask: string;
 add() {
   this.tasksService.add(this.newTask)
   this.newTask = '';
-
 }
 
 }
