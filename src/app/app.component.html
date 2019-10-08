@@ -1,15 +1,27 @@
-<div>
-  <div class="container">
-    <app-add-task></app-add-task>
+<div class="container-fluid">
+  <div class="row">
+    <div class="container">
+      <div class="row">
+        <app-header></app-header>
+      </div>
+
+      <div class="row my-3 mx-auto">
+        <app-add-task></app-add-task>
+      </div>
+    </div>
   </div>
 
-  <div class="container">
-    <div>
-      <app-todo-task></app-todo-task>
-    </div>
+  <div class="row main">
+    <div class="container border rounded">
+      <div class="row">
+        <div class="col-sm">
+          <app-todo-task></app-todo-task>
+        </div>
 
-    <div>
-      <app-done-task></app-done-task>
+        <div class="col-sm">
+          <app-done-task></app-done-task>
+        </div>
+      </div>
     </div>
   </div>
 </div>
