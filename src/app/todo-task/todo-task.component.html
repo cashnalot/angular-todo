@@ -1,16 +1,27 @@
-
-    <ng-container *ngIf="tasksList.length > 0; else noTask">
-      <p [ngStyle]="{color: getColor()}" >Zadania do zrobienia: {{tasksList.length}}</p>
-      <ul>
-        <li *ngFor="let task of tasksList">
-          {{task}}
-          <button class="btn btn-danger" (click)="remove(task)">Skasuj</button>
-          <button class="btn btn-success" (click)="done(task)">Dodaj</button>
-        </li>
-      </ul>
-    </ng-container>
-    <ng-template #noTask>
-      <p>Brak aktualnych zadań do wykonania.</p>
-    </ng-template>
-
-
+<ng-container *ngIf="tasksList.length > 0; else noTask">
+  <p [ngStyle]="{ color: getColor() }">
+    Zadania do zrobienia: {{ tasksList.length }}
+  </p>
+  <ul>
+    <li *ngFor="let task of tasksList">
+      {{ task }}
+      <ng-template #popContent>
+        <button class="btn btn-danger" (click)="remove(task)">Skasuj</button>
+        <button class="btn btn-success" (click)="done(task)">Dodaj</button>
+      </ng-template>
+      <ng-template #popTitle>Co chcesz zrobić?</ng-template>
+      <button
+        type="button"
+        class="btn btn-outline-secondary"
+        [ngbPopover]="popContent"
+        [popoverTitle]="popTitle"
+        [autoClose]="'outside'"
+      >
+      ikonka
+      </button>
+    </li>
+  </ul>
+</ng-container>
+<ng-template #noTask>
+  <p class="no-task">Brak aktualnych zadań do wykonania.</p>
+</ng-template>
