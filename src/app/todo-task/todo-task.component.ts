@@ -30,5 +30,7 @@ this.tasksService.remove(task);
   getColor(): string {
     return this.tasksList.length >= 5 ? 'red' : 'green';
   }
-
+  getWeight(): string{
+    return this.tasksList.length >= 5 ? '700' : '500';
+  }
 }
