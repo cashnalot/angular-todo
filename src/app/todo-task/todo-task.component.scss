@@ -4,6 +4,12 @@ button{
 }
 li {
   font-weight: 500;
+  a{
+    margin: 5px;
+    &:hover{
+      transform: rotate(90deg); //do poprawki, z linkiem chyba nie da rady zrobić
+    }
+  }
 }
 .no-task{
   color: rgb(118, 173, 35);

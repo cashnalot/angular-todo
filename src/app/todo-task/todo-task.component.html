@@ -1,5 +1,5 @@
 <ng-container *ngIf="tasksList.length > 0; else noTask">
-  <p [ngStyle]="{'color': getColor(), 'font-weight': getWeight()}">
+  <p [ngStyle]="{ color: getColor(), 'font-weight': getWeight() }">
     Zadania do zrobienia: {{ tasksList.length }}
   </p>
   <ul>
@@ -10,16 +10,14 @@
         <button class="btn btn-success" (click)="done(task)">Dodaj</button>
       </ng-template>
       <ng-template #popTitle>Co chcesz zrobić?</ng-template>
-      <button
-        type="button"
-        class="btn btn-outline-secondary"
+      <a
         [ngbPopover]="popContent"
         [popoverTitle]="popTitle"
         [autoClose]="'outside'"
         [placement]="'right'"
       >
-      ikonka
-      </button>
+        <img src="../../assets/hamburger.png" height="20px" width="20px" alt="hamburger"
+      /></a>
     </li>
   </ul>
 </ng-container>
